@@ -6,4 +6,7 @@
     <string name="registration">등록</string>
     <string name="registered_fruit">등록한 과일 &#58; </string>
 
+    <string name="fruit_search">과일 검색</string>
+    <string name="search">검색</string>
+    <string name="fruit_search_result"> 과일 검색 결과 &#58; </string>
 </resources>
