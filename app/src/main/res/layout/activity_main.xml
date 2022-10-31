@@ -9,6 +9,9 @@
             name="registrationResult"
             type="String" />
 
+        <variable
+            name="searchResult"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
