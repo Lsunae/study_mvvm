@@ -19,15 +19,18 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     private fun setClickEvent() {
         binding.apply {
-            tvBtn.setOnClickListener {
-                viewModel.setFruit(etInput.text.toString())
+            tvRegistrationBtn.setOnClickListener {
+                viewModel.getFruit(etInputFruitRegistration.text.toString())
+            }
+            tvSearchBtn.setOnClickListener {
+                viewModel.getFruit(etInputFruitSearch.text.toString())
             }
         }
     }
 
     private fun setupViewModel() {
-        viewModel.fruit.observe(this) {
-            binding.inputFruit = it
+        viewModel.registeredFruit.observe(this) {
+            binding.registrationResult = it
         }
     }
 }

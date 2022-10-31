@@ -5,10 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class FruitViewModel() : ViewModel() {
-    private val _fruit = MutableLiveData<String>()
-    val fruit: LiveData<String> = _fruit
+    private val _registeredFruit = MutableLiveData<String>()
+    val registeredFruit: LiveData<String> = _registeredFruit
 
-    fun setFruit(textStr: String) {
-        _fruit.value = textStr
+    fun getFruit(textStr: String) {
+        _registeredFruit.value = textStr
     }
+
 }
