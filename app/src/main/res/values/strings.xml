@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">study_mvvm</string>
+
+    <string name="fruit_registration">과일 등록</string>
+    <string name="fruit_name_input">과일 이름을 입력해주세요.</string>
+    <string name="registration">등록</string>
+    <string name="registered_fruit">등록한 과일 &#58; </string>
+
 </resources>
