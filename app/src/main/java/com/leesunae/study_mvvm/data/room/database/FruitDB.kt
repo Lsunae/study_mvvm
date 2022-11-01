@@ -7,7 +7,7 @@ import com.leesunae.study_mvvm.data.room.entity.FruitEntity
 
 @Database(entities = [FruitEntity::class], version = 1)
 abstract class FruitDB : RoomDatabase() {
-    abstract fun textDao(): FruitDao
+    abstract fun fruitDao(): FruitDao
 
 
 }
