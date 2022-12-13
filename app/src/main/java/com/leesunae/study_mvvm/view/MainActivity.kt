@@ -6,7 +6,9 @@ import com.leesunae.bebehelper_mvp.view.base.BaseActivity
 import com.leesunae.study_mvvm.R
 import com.leesunae.study_mvvm.databinding.ActivityMainBinding
 import com.leesunae.study_mvvm.viewModel.FruitViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val viewModel: FruitViewModel by viewModels()
 
@@ -20,17 +22,23 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     private fun setClickEvent() {
         binding.apply {
             tvRegistrationBtn.setOnClickListener {
-                viewModel.getFruit(etInputFruitRegistration.text.toString())
+                val fruitName = etInputFruitRegistration.text.toString()
+                viewModel.registerFruit(fruitName)
             }
             tvSearchBtn.setOnClickListener {
-                viewModel.getFruit(etInputFruitSearch.text.toString())
+                viewModel.searchFruit(etInputFruitSearch.text.toString())
             }
         }
     }
 
     private fun setupViewModel() {
-        viewModel.registeredFruit.observe(this) {
-            binding.registrationResult = it
+        viewModel.apply {
+            registeredFruit.observe(this@MainActivity) {
+                binding.registrationResult = it
+            }
+            searchFruit.observe(this@MainActivity) {
+                binding.searchResult = it
+            }
         }
     }
 }

@@ -4,10 +4,7 @@ import com.leesunae.study_mvvm.data.repository.Callback
 import com.leesunae.study_mvvm.data.room.entity.FruitEntity
 
 interface FruitLocalDataSource {
-    fun createFruit(
-        text: String,
-        callback: Callback<FruitEntity>
-    )
+    fun createFruit(fruitName: String, callback: Callback<Boolean>)
 
-    fun getFruit(email: String, callback: Callback<FruitEntity>)
+    fun getFruit(fruitName: String, callback: Callback<FruitEntity>)
 }
