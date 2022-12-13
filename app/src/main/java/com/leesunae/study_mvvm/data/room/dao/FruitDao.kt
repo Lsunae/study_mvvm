@@ -11,6 +11,6 @@ interface FruitDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFruit(fruit: FruitEntity): Long
 
-    @Query("SELECT * FROM fruit WHERE id = :id")
-    fun getFruit(id: Int): FruitEntity
+    @Query("SELECT * FROM fruit WHERE fruitName = :name")
+    fun getFruit(name: String): FruitEntity?
 }
