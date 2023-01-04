@@ -8,6 +8,7 @@ Kotlin 기반의 MVVM 구조로 과일 이름을 입력하여 Room Database에 �
 ### 사용 기술 & 라이브러리
 - Kotlin
 - MVVM
+- LiveData
 - Hilt
 - Room Database
 - DataBinding
