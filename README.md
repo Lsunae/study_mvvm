@@ -10,5 +10,5 @@ Kotlin 기반의 MVVM 구조로 과일 이름을 입력하여 Room Database에 �
 - MVVM
 - LiveData
 - Hilt
-- Room Database
+- Room
 - DataBinding
